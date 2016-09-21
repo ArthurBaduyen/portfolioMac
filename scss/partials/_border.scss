@@ -1,0 +1,115 @@
+.bt { border-top: $default-border; }
+.bb { border-bottom: $default-border; }
+.bl { border-left: $default-border; }
+.br { border-right: $default-border; }
+
+.border {
+	@extend .bt;
+	@extend .bb;
+	@extend .bl;
+	@extend .br;
+}
+
+
+// BORDER WIDTH
+// ---------------------------------------------------------------------------------
+// SAMPLE OUTPUT: 
+// .b-1 { border-width: 1px; }
+// .bt-1 { border-top: 1px; }
+// .bb-1 { border-bottom: 1px; }
+// .bl-1 { border-left: 1px; }
+// .br-1 { border-right: 1px; }
+$class-border-width: b- !default;
+$class-border-top: bt- !default;
+$class-border-bottom: bb- !default;
+$class-border-left: bl- !default;
+$class-border-right: br- !default;
+
+@for $i from $min-bw through $max-bw { //for $min-bw & $max-bw value please refer to _variables.scss
+	.#{$class-border-width}#{$i} { border-width: #{$i}px; }
+	.#{$class-border-top}#{$i} { border-top: #{$i}px solid inherit; }
+	.#{$class-border-bottom}#{$i} { border-bottom: #{$i}px solid inherit; }
+	.#{$class-border-left}#{$i} { border-left: #{$i}px; }
+	.#{$class-border-right}#{$i} { border-right: #{$i}px; }
+}
+// ---------------------------------------------------------------------------------
+
+
+// Custom Border
+// INPUT ($class, $width,$style,$side)
+// $class - name of the output class.
+// $width - amount of border width.
+// $style - border style(e.g. solid).
+// $side -  w/c side of the element will appear. Use -top, -bottom, -left, -right or leave blank for both 4 sides
+// NOTE: - If creating a class with two or three border use the "n n n n" format for width and leave the $side blank
+// ---------------------------------------------------------------------------------
+$borderList:
+	(bt-80, 8px, solid, #323, -top),
+	(b-8, 8px, solid, #777, -bottom),
+	(bl-nav-red, 5px, solid, #ff7272, -left),
+	(bl-nav-green, 5px, solid, #57d483, -left),
+	(bl-nav-blue, 0px 0 0 5px, solid, #55b8ff, -left),
+	(btbr-3, 3rem 3px 3px 0rem, solid,  #55b8ff),
+
+	//YUKO
+	(btb-4, 4px 0px 4px 0px, solid, #2199e8),
+
+	//MUTO
+	(border-4, 4px 4px 4px 4px, solid, #2199e8),
+	(border-2, 2px 2px 2px 2px, solid, #2199e8);
+
+
+@mixin create-border-class($width, $style, $color,$side) { 
+	
+	@if $side == null{
+		border-width: #{$width};
+		border-color: #{$color};
+		border-style: #{$style};
+	}
+	@else{
+		border#{$side}: $width $style $color; 
+	}
+}
+@each $class, $width, $style, $color, $side in $borderList{
+  .#{$class} { @include create-border-class($width,$style,$color,$side) }
+}
+// ---------------------------------------------------------------------------------
+
+
+// BORDER RADIUS
+// ---------------------------------------------------------------------------------
+// SAMPLE OUTPUT: 
+// .b-rad1 { border-radius: 1px; }
+// .b-tl-rad1 { border-top-left-radius: 1px; }
+// .b-tr-rad1 { border-top-right-radius: 1px; }
+// .b-bl-rad1 { border-bottom-left-radius: 1px; }
+// .b-br-rad1 { border-bottom-right-radius: 1px; }
+$class-border-Radius: b-rad !default;
+$class-border-tlRadius: b-tl-rad !default;
+$class-border-trRadius: b-tr-rad !default;
+$class-border-blRadius: b-bl-rad !default;
+$class-border-brRadius: b-br-rad !default;
+
+@for $i from $min-br through $max-br { //for $min-br & $max-br value please refer to _variables.scss
+	.#{$class-border-Radius}#{$i} { border-radius: #{$i}px; }
+	.#{$class-border-tlRadius}#{$i} { border-top-left-radius: #{$i}px; }
+	.#{$class-border-trRadius}#{$i} { border-top-right-radius: #{$i}px; }
+	.#{$class-border-blRadius}#{$i} { border-bottom-left-radius: #{$i}px; }
+	.#{$class-border-brRadius}#{$i} { border-bottom-right-radius: #{$i}px; }
+}
+// ---------------------------------------------------------------------------------
+
+
+// Custom Border Radius
+// INPUT ($class, $value)
+// $class - name of the output class.
+// $value - amout of radius (e.g. 5px)
+// ---------------------------------------------------------------------------------
+$custom-border-radius:
+	(b-radmax,150px),
+	(b-rad-50,50rem,-top-left),
+	(b-rad-25,25rem);
+@each $class, $val, $edge in $custom-border-radius {
+	.#{$class} { border#{$edge}-radius: $val; }
+}
+// ---------------------------------------------------------------------------------

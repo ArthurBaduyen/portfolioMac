@@ -1,0 +1,51 @@
+// MARGINS
+// ---------------------------------------------------------------------------------
+// OUTPUT: 
+// .pt-1 { padding-top: 0 ; }
+// .pl-1 { padding-left: 0 ; }
+// .pr-1 { padding-right: 0 ; }
+// .ptb1 { padding-bottom: 0 ; }
+
+// class prefix 
+$class-pt: pt- !default;
+$class-pl: pl- !default;
+$class-pb: pb- !default;
+$class-pr: pr- !default;
+$class-pad: padding- !default;
+
+// class creation
+@for $i from $min-pad through $max-pad { //for $min-padding & $max-padding value please refer to _variables.scss
+	.#{$class-pt}#{$i} { padding-top: #{$i}rem !important; }
+	.#{$class-pl}#{$i} { padding-left: #{$i}rem !important; }
+	.#{$class-pb}#{$i} { padding-bottom: #{$i}rem !important; }
+	.#{$class-pr}#{$i} { padding-right: #{$i}rem !important; }
+	.#{$class-pad}#{$i} { padding: #{$i}rem !important; }
+}
+ 
+
+// Custom Padding
+// ---------------------------------------------------------------------------------
+// INPUT ($class, $value,$side)
+// $class - name of the output class.
+// $value - amout of radius (e.g. 5px)
+// $side -  w/c side of the element will appear. Use -top, -bottom, -left, -right or leave blank to apply all sides.
+$custom-padding:
+	(padding-half,.5rem),
+	(pt-half,.5rem,-top),
+	(pt-1half,1.5rem,-top),
+	(pt-2half,2.5rem,-top),
+	(pb-half,.5rem,-bottom),
+	(pb-1half,1.5rem,-bottom),
+	(pb-2half,2.5rem,-bottom),
+	(pl-half,.5rem,-left),
+	(pl-1half,1.5rem,-left),
+	(pl-2half,2.5rem,-left),
+	(pr-half,.5rem,-right),
+	(pr-1half,1.5rem,-right),
+	(pr-2half,2.5rem,-right);
+
+@each $class, $val, $side in $custom-padding {
+	.#{$class} { padding#{$side}: $val; }
+}
+
+

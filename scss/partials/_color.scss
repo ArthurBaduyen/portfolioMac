@@ -1,0 +1,68 @@
+// Text and Background color
+// ---------------------------------------------------------------------------------
+// SAMPLE OUTPUT
+// .txt-black { color: #000 }
+// .bg-black { background-color: #000 }
+$list-color: (primary, $primary),(secondary,$secondary),(success,$success),(warning,$warning),(alert,$alert),(black,$black),(grey,#808080);
+
+@each $class,$val in $list-color {
+	.txt-#{$class} { color: $val; }
+	.bg-#{$class} { background-color: $val }
+}
+
+
+// ---------------------------------------------------------------------------------
+
+
+// lighten and darken colors in $color-val by 10%,20%,30% and 40%
+// ---------------------------------------------------------------------------------
+// the conten of $colors and $color-val should have the same value except add '$' in each item of $color-val
+// Sample output
+// .bg-primary-light20 { background-color: lighten($primary, 20%) }
+// .bg-success-dark20 { background-color: darken($success, 20%) }
+
+$colors: primary, secondary, success, warning, alert;
+$color-val: $primary, $secondary, $success, $warning, $alert;
+
+@for $x from 1 through length($colors) {
+	$class: nth($colors,$x);
+	$val: nth($color-val,$x);
+	@for $y from 1 through 4 {
+		.bg-#{$class}-light#{$y*10} { background-color: lighten($val,$y*10); }
+		.bg-#{$class}-dark#{$y*10} { background-color: darken($val,$y*10); }
+	}
+}
+// ---------------------------------------------------------------------------------
+
+
+// Custom Background color
+// $custom-bg:(Class name, color),(n, n);
+// ---------------------------------------------------------------------------------
+$custom-bg:
+	(bg-white,#fff),
+	(body-bg, $body-bg),
+	(main-content-bg, $content-main-container),
+	(about-bg,$content-about),
+	(myColor2,#E1E1E1),
+	(myColor3,#D9D9D9);
+@each $class, $val in $custom-bg {
+	.#{$class} { background-color: $val; }
+}
+// ---------------------------------------------------------------------------------
+
+// Custom Text color
+// $custom-txt:(Class name, color),(n, n);
+// ---------------------------------------------------------------------------------
+$custom-txt:(txt-white,#fff),(myColor2,#E1E1E1),(myColor3,#D9D9D9);
+@each $class, $val in $custom-txt {
+	.#{$class} { color: $val; }
+}
+// ---------------------------------------------------------------------------------
+
+.custom-label{
+	background-color: #777; 
+	color: #fff; 
+	font-size: .7rem;
+	border-color: #777;
+}
+

@@ -1,0 +1,49 @@
+// MARGINS
+// ---------------------------------------------------------------------------------
+// OUTPUT: 
+// .mt-1 { margin-top: 1 ; }
+// .ml-1 { margin-left: 1 ; }
+// .mr-1 { margin-right: 1 ; }
+// .mtb1 { margin-bottom: 1 ; }
+
+// class prefix
+$class-mar-top: mt- !default;
+$class-mar-left: ml- !default;
+$class-mar-bottom: mb- !default;
+$class-mar-right: mr- !default;
+$class-mar: margin- !default;
+
+// class creation
+@for $i from $min-mar through $max-mar { //for $min-margin & $max-margin value please refer to _variables.scss
+	.#{$class-mar-top}#{$i} { margin-top: #{$i}rem; }
+	.#{$class-mar-left}#{$i} { margin-left: #{$i}rem; }
+	.#{$class-mar-bottom}#{$i} { margin-bottom: #{$i}rem; }
+	.#{$class-mar-right}#{$i} { margin-right: #{$i}rem; }
+	.#{$class-mar}#{$i} { margin: #{$i}rem; }
+}
+
+
+// Custom Margin
+// ---------------------------------------------------------------------------------
+// INPUT ($class, $value,$side)
+// $class - name of the output class.
+// $value - amout of radius (e.g. 5px)
+// $side -  w/c side of the element will appear. Use -top, -bottom, -left, -right or leave blank to apply all sides.
+$custom-margin:
+	(mb-half,.5rem,-bottom),
+	(mb-1half,1.5rem,-bottom),
+	(mb-2half,2.5rem,-bottom),
+	(mt-half,.5rem,-top),
+	(mt-1half,1.5rem,-top),
+	(mt-2half,2.5rem,-top),
+	(mr-half,.5rem,-right),
+	(mr-1half,1.5rem,-right),
+	(mr-2half,2.5rem,-right),
+	(ml-half,.5rem,-left),
+	(ml-1half,1.5rem,-left),
+	(ml-2half,2.5rem,-left);
+
+	
+@each $class, $val, $side in $custom-margin {
+	.#{$class} { margin#{$side}: $val; }
+}
