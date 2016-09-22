@@ -1,5 +1,6 @@
 // Shadow level
 .ds-0 { box-shadow: none !important; }
+.ds-half { box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 .ds-1 { box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 .ds-1-half { box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 .ds-2 { box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -13,6 +14,66 @@
 
   &:hover{
   	transition: box-shadow .25s;
-  	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+  	@extend .ds-2;
   }
 }
+
+.hoverme1 {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover{
+  	transition: box-shadow .25s;
+  	@extend .ds-2;
+  }
+}
+
+.hoverme1-half {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover{
+  	transition: box-shadow .25s;
+  	@extend .ds-2;
+  }
+}
+
+.hoverme2 {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover{
+  	transition: box-shadow .25s;
+  	@extend .ds-2;
+  }
+}
+
+.hoverme3 {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover{
+  	transition: box-shadow .25s;
+  	@extend .ds-2;
+  }
+}
+
+.hoverme4 {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover{
+  	transition: box-shadow .25s;
+  	@extend .ds-2;
+  }
+}
+
+// .hoverme5 {
+//   transition: box-shadow .25s;
+//   box-shadow: 0;
+
+//   &:hover{
+//   	transition: box-shadow .25s;
+//   	@extend .ds-2;
+//   }
+// }

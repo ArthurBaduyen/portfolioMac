@@ -48,6 +48,8 @@
 			@extend .mb-half;
 			@extend .padding-half;
 			@extend .hoverme;
+			@extend .pr-2;
+			@extend .pl-1;
 			border-top: 4px solid rgba(#FA6900, 0);
 			h5 {
 				color: #FA6900;
@@ -60,7 +62,7 @@
 			p {
 				@extend .bt;
 				@extend .mt-half;
-				font-size: .9rem;
+				font-size: .8rem;
 				color: #737373;
 			}
 			&:hover {

@@ -49,3 +49,12 @@ $custom-padding:
 }
 
 
+
+// NEW CLASS USING MIXIN
+@mixin col-x-list($class, $val, $side) {
+  .#{$class} { padding#{$side}: $val; }
+}
+
+@include col-x-list(test,1rem,-right);
+@include col-x-list(cool,2rem,-left);
+
