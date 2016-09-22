@@ -48,3 +48,21 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+// google fonts
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oxygen|Raleway';
+
+// vendor
+@import "vendor/font-awesome-4.6.3/scss/font-awesome.scss";
+
+//partials
+@import "partials/variables.scss";
+@import "partials/typography.scss";
+@import "partials/margin.scss";
+@import "partials/padding.scss";
+@import "partials/border.scss";
+@import "partials/drop-shadow.scss";
+@import "partials/color.scss";
+@import "partials/override.scss";
+@import "partials/container.scss";
