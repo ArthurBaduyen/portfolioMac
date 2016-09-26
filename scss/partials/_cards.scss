@@ -42,19 +42,14 @@
 		}	
 	}
 
-	
-	
 	&:hover {
 		.img {
 			transition: all .25s ease-out;  
-			// background-color: #9a9a9a;
 			background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-			// background-position: 0px -50px;
-			
 		}
-	div.text {
-		transition: all .25s ease-out;  
-		bottom: 0px;
+		div.text {
+			transition: all .25s ease-out;
+			bottom: 0px;
 		}
 	}
 }
