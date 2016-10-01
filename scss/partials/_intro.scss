@@ -8,6 +8,15 @@
     // filter: blur(2px);
 }
 
+.footer-image {
+	background-image: linear-gradient(-45deg, rgba(100, 100, 250, 0.75), rgba(250, 100, 100, 0.75)), url(../img/arthurAlp.jpg);
+	background-size: 100%;
+	background-position: bottom;
+	background-repeat: no-repeat;
+    filter: alpha(opacity=50);
+    background-color: rgba(200,200,200,0.5);
+}
+
 .tagline {
 	$tagline-color: #000;
 	h1 p {
@@ -16,6 +25,41 @@
 		line-height: 1;
 		text-shadow: 0px 0px .1rem $tagline-color;
 		background: -webkit-linear-gradient( rgba($tagline-color, 1), rgba(#323232, 1));
+	  	-webkit-background-clip: text;
+	  	-webkit-text-fill-color: transparent;
+	}
+	h5 {
+		font-family: Roboto;
+		line-height: 1;
+		color: $tagline-color;
+		text-shadow: 0px 0px .1rem $tagline-color;
+	}
+
+	a {
+		color: $tagline-color;
+		text-shadow: 0px 0px .1rem $tagline-color;
+		text-decoration: underline;
+	}
+}
+
+
+.subpage-header {
+	background-image: linear-gradient(-45deg, rgba(100, 100, 250, 0.75), rgba(250, 100, 100, 0.75)), url(../img/arthurAlp.jpg);
+	background-size: 100% ;
+	background-repeat: no-repeat;
+    filter: alpha(opacity=50);
+    background-color: rgba(200,200,200,0.5);
+}
+
+.subpage-title{
+	margin-top: 10vh;
+	$tagline-color: #fff;
+	h1 p {
+		margin-bottom: 0px;
+		font-family: Roboto;
+		line-height: 1;
+		text-shadow: 0px 0px .1rem $tagline-color;
+		background: -webkit-linear-gradient( rgba($tagline-color, 1), rgba(#E1E1E1, 1));
 	  	-webkit-background-clip: text;
 	  	-webkit-text-fill-color: transparent;
 	}

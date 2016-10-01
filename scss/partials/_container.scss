@@ -4,6 +4,7 @@
 	margin-right: auto;
 	top:50%;
 	left:50%;
+	// margin-bottom: 
 	transform: translate(-50%, -50%);
 }
 
@@ -24,15 +25,27 @@
 }
 
 .cont-h80 {
-	height: 80vh;
+	min-height: 80vh;
+}
+
+.cont-h60 {
+	min-height: 60vh;
+}
+
+.cont-h50 {
+	min-height: 50vh;
+}
+
+.cont-h40 {
+	min-height: 40vh;
 }
 
 .cont-h30 {
-	height: 30vh;
+	min-height: 30vh;
 }
 
 .cont-h20 {
-	height: 20vh;
+	min-height: 20vh;
 }
 
 
