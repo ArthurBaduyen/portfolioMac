@@ -49,27 +49,38 @@
 
             <!-- CONTENT GOES HERE -->
 
-            <section class="mt-0 mb-4">
+            <section class="mt-0 mb-4" ng-app="homepagePortfolio">
               <!-- <h1 class="ml-1">Portfolio</h1> -->
-              <div class="row">
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
+              <div class="row" ng-controller="portfolioItemController">
+
+                <div class="large-3 medium-6 small-12 column" ng-repeat="portfolioItem in portfolio">
+
+                  <a data-toggle="{{portfolioItem.revealID}}">
                     <div class="card1">
                       <div class="img">
-                        <img src="img/portfolio/Wind_Test_600x450.jpg">
+                        <img src="{{portfolioItem.imgThumbUrl}}">
                       </div>
                       <div class="text">
-                        <p class="title">Wind Test</p>
-                        <p class="category">3D Animation</p>
+                        <p class="title">{{portfolioItem.title}}</p>
+                        <p class="category">{{portfolioItem.category}}</p>
                       </div>
                       <div class="action">
-                        <a href="https://www.behance.net/gallery/34100338/Wind-Test" target="_blank"><i class="fa fa-behance"></i> Behance</a>
+                        <a href="{{portfolioItem.beLink}}" target="_blank"><i class="fa fa-behance"></i> Behance</a>
                       </div>
                     </div>
+                    <div class="large reveal" id="{{portfolioItem.revealID}}" data-reveal>
+                      <img src="{{portfolioItem.imgUrl}}" alt="Intropsective Cage">
+                      <button class="close-button" data-close aria-label="Close reveal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
                   </a>
+
                 </div>
+                
+
                 <div class="large-3 medium-6 small-12 column">
-                  <a class="">
+                  <a class="" data-toggle="example">
                     <div class="card1">
                       <div class="img">
                         <img src="img/portfolio/Low_Poly_Forest_600x450.jpg">
@@ -83,6 +94,12 @@
                       </div>
                     </div>
                   </a>
+                  <div class="large reveal" id="example" data-reveal>
+                    <img src="img/portfolio/Low_Poly_Forest.jpg" alt="Intropsective Cage">
+                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="large-3 medium-6 small-12 column">
                   <a class="">
@@ -164,150 +181,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/portfolio/Brochure_template_Invitation_600x450.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Brochure Template Invitation</p>
-                        <p class="category">Print</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Pink Ballon</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Plane to Tokyo</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">448 Days</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Carrot Cafe</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Let the battle begin</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">12 Days A Week</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">It Wasn't Easy</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="large-3 medium-6 small-12 column">
-                  <a class="">
-                    <div class="card1">
-                      <div class="img">
-                        <img src="img/arthur.jpg">
-                      </div>
-                      <div class="text">
-                        <p class="title">Red Burnt Notebook</p>
-                        <p class="category">Web Design</p>
-                      </div>
-                      <div class="action">
-                        <a href="http://www.behance.com" target="_blank"><i class="fa fa-behance"></i> Behance</a>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+               
               </div>
               <div class="row">
                 <div class="medium-12 columns txt-center mt-2">
@@ -418,54 +292,44 @@
     </div>
     
     <div class="row expanded">
-      <div class="column medium-12 pr-0 pl-0 ds-22 main-content-bg pr-0">
+      <div class="column medium-12 pr-0 pl-0 ds-22  pr-0">
         
-        <section class="footer-image pt-1 cont-h50">
+        <section class="footer-bg pt-1 pb-">
           <div class="row ">
             <div class="large-10 medium-10 small-11 large-centered medium-centered small-centered">
-              <div class="row">
-                <div class="medium-4 column">
-                  <h4>Title</h4>
+              <div class="navigation">
+                <div class="myName">
+                  <a href="#"><h4>Arthur Baduyen</h4></a>
+                </div>
+                <div class="menu float-right">
                   <ul>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Potfolio</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="#">Blog</a></li>
                   </ul>
                 </div>
-                <div class="medium-4 column">
-                  <h4>Title</h4>
-                  <ul>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                  </ul>
-                </div>
-                <div class="medium-4 column">
-                  <h4>Title</h4>
-                  <ul>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                    <li><a href="#"></a>Item</li>
-                  </ul>
-                </div>
+              </div>
+              <div class="tagline make-center">
+                <h1><p>Hi! I'm Arthur Baduyen</p>
+                <p>I'm a web designer based in Philippines.</p></h1>
+                <h5>I'm working with awesome guys at <a href="http://www.chromedia.com">Chromedia</a>.</h5>
               </div>
             </div>
           </div>
         </section>
+
       </div>
     </div>   
+
+
 
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

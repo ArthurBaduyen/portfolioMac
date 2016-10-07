@@ -75,7 +75,7 @@
 		transition: all 1s ease-out;  
 		background-color: #fff;
 		width: 100%;
-		@extend .pb-1;
+		@extend .pb-half;
 		@extend .pl-1;
 		@extend .pr-1;
 		.title {
@@ -103,7 +103,7 @@
 		color: #737373;
 		padding-left: 1rem;
 		padding-right: .5rem;
-		padding-bottom: .5rem;
+		// padding-bottom: 1rem;
 		margin-bottom: 0;
 			a {
 				display: inline-block;
@@ -140,3 +140,4 @@
 		}
 	}
 }
+
