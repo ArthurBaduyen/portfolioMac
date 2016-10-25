@@ -53,12 +53,12 @@
               <!-- <h1 class="ml-1">Portfolio</h1> -->
               <div class="row" ng-controller="portfolioItemController">
 
-                <div class="large-3 medium-6 small-12 column" ng-repeat="portfolioItem in portfolio">
+                <div class="large-2 medium-4 small-12 column" ng-repeat="portfolioItem in portfolio">
 
                   <a data-toggle="{{portfolioItem.revealID}}">
                     <div class="card1">
                       <div class="img">
-                        <img src="{{portfolioItem.imgThumbUrl}}">
+                        <img src="{{portfolioItem.imgThumbUrl}}" alt="{{portfolioItem.title}}">
                       </div>
                       <div class="text">
                         <p class="title">{{portfolioItem.title}}</p>
@@ -69,7 +69,7 @@
                       </div>
                     </div>
                     <div class="large reveal" id="{{portfolioItem.revealID}}" data-reveal>
-                      <img src="{{portfolioItem.imgUrl}}" alt="Intropsective Cage">
+                      <img src="{{portfolioItem.imgUrl}}" alt="{{portfolioItem.title}}">
                       <button class="close-button" data-close aria-label="Close reveal" type="button">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -79,7 +79,7 @@
                 </div>
                 
 
-                <div class="large-3 medium-6 small-12 column">
+                <!-- <div class="large-3 medium-6 small-12 column">
                   <a class="" data-toggle="example">
                     <div class="card1">
                       <div class="img">
@@ -180,7 +180,7 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
                
               </div>
               <div class="row">
@@ -289,6 +289,28 @@
         </div>
 
       </div>
+    </div>
+    <div class="large-3 medium-6 small-12 column">
+                  <a class="" data-toggle="example">
+                    <div class="card1">
+                      <div class="img">
+                        <img src="img/portfolio/Low_Poly_Forest_600x450.jpg">
+                      </div>
+                      <div class="text">
+                        <p class="title">Low Poly Forest</p>
+                        <p class="category">3d landscape design</p>
+                      </div>
+                      <div class="action">
+                        <a href="https://www.behance.net/gallery/34099388/Low-Poly-Forest" target="_blank"><i class="fa fa-behance"></i> Behance</a>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="large reveal" id="example" data-reveal>
+                    <img src="img/portfolio/Low_Poly_Forest.jpg" alt="Intropsective Cage">
+                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
     </div>
     
     <div class="row expanded">

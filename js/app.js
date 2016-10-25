@@ -60,6 +60,97 @@ portfolioItemApp.controller('portfolioItemController', function portfolioItemCon
       imgThumbUrl: 'img/portfolio/Brochure_template_Invitation_600x450.jpg',
       imgUrl: 'img/portfolio/Brochure_template_Invitation.jpg',
       revealID:'BrochureTemplateInvitation'
+    }, {
+      title: 'Alphabet Grid',
+      category: '3D Art',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      imgUrl: 'img/portfolio/C4D_Alphabet2.jpg',
+      revealID:'AlphabetGrid'
+    }, {
+      title: 'Book',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_Book_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_Book.jpg',
+      revealID:'IllustrationBook'
+    }, {
+      title: 'Captain America Shield',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_CapAmericaShield_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_CapAmericaShield.jpg',
+      revealID:'CaptainAmericaShield'
+    }, {
+      title: 'Joystick',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_Joystick_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_Joystick.jpg',
+      revealID:'Joystick'
+    }, {
+      title: 'Smart Phone',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_Mobile_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_Mobile.jpg',
+      revealID:'SmartPhone'
+    }, {
+      title: 'News Paper',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_News_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_News.jpg',
+      revealID:'NewsPaper'
+    }, {
+      title: 'Paper',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_Paper_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_Paper.jpg',
+      revealID:'Paper'
+    }, {
+      title: '3D Grid Alphabet',
+      category: '3D Art',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      imgUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      revealID:'3DGridAlphabet'
+    }, {
+      title: 'Ribbon',
+      category: 'Illustration',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/Ai_Ribbon_600x450.jpg',
+      imgUrl: 'img/portfolio/Ai_Ribbon.jpg',
+      revealID:'Ribbon'
+    }, {
+      title: 'Pluto',
+      category: '3D Animation',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/C4D_Planet_Ice_600x450.jpg',
+      imgUrl: 'img/portfolio/C4D_Planet_Ice.jpg',
+      revealID:'Pluto'
+    }, {
+      title: 'Web UI Button',
+      category: 'Web Design',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/UI_Web_Buttons_600x450.jpg',
+      imgUrl: 'img/portfolio/UI_Web_Buttons.jpg',
+      revealID:'WebUIButton'
+    }, {
+      title: '',
+      category: '',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      imgUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      revealID:''
+    }, {
+      title: '',
+      category: '',
+      beLink: 'http://www.behance.com/',
+      imgThumbUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      imgUrl: 'img/portfolio/C4D_Alphabet2_600x450.jpg',
+      revealID:''
     }
   ];
 });
